@@ -1,0 +1,152 @@
+<DomainModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph" dataSyncOnReopen="true">
+  <Class gr:x="75" gr:y="10" id="MUser" name="App User" singleton="true" duration="persistent" attributeOrder="mUserOID mUsername">
+    <Attribute id="mUserOID" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    <Attribute id="mUsername" name="username" type="string"/>
+    <Comment xml:space="preserve">App User represents the current user of the mobile application. The user is identified by username. For security reasons, other information, such as the password, is not stored here but in the device account manager. You are free to add any additional attribute to this class.  When using the Mobile Project in combination with a Data Service project, this class must be mapped on the remote User class, and thus inherits its attributes.</Comment>
+  </Class>
+  <Class gr:x="390" gr:y="15" id="MRole" name="App Role" duration="persistent" attributeOrder="mRoleOID mRoleName">
+    <Attribute id="mRoleOID" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    <Attribute id="mRoleName" name="name" type="string"/>
+    <Comment xml:space="preserve">App Role represents an application role belonging to the current user of the mobile application. When the Mobile Project is used in combination with a Data Service project, the list of roles is automatically retrieved from remote at the login.</Comment>
+  </Class>
+  <Association id="MUser2MRole_MRole2MUser" sourceClass="MUser" targetClass="MRole">
+    <AssociationRole1 id="MUser2MRole" name="AppUserToAppRole" maxCard="N"/>
+    <AssociationRole2 id="MRole2MUser" name="AppRoleToAppUser" maxCard="1"/>
+  </Association>
+  <Package gr:x="-5" gr:y="115" id="pkg1" name="UserService">
+    <Class gr:x="390" gr:y="125" id="pkg1#cls4" name="User" duration="persistent" attributeOrder="pkg1#cls4#att4 pkg1#cls4#att84 pkg1#cls4#att85 pkg1#cls4#att86 pkg1#cls4#att87 pkg1#cls4#att88 pkg1#cls4#att89 pkg1#cls4#att90 pkg1#cls4#att91 pkg1#cls4#att92 pkg1#cls4#att93">
+      <Attribute id="pkg1#cls4#att4" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+      <Attribute id="pkg1#cls4#att93" name="shardId" type="string"/>
+      <Attribute id="pkg1#cls4#att92" name="active" type="string"/>
+      <Attribute id="pkg1#cls4#att91" name="deleted" type="string"/>
+      <Attribute id="pkg1#cls4#att90" name="created" type="string"/>
+      <Attribute id="pkg1#cls4#att89" name="updated" type="string"/>
+      <Attribute id="pkg1#cls4#att88" name="privilege" type="string"/>
+      <Attribute id="pkg1#cls4#att87" name="timezone" type="string"/>
+      <Attribute id="pkg1#cls4#att86" name="name" type="string"/>
+      <Attribute id="pkg1#cls4#att85" name="email" type="string"/>
+      <Attribute id="pkg1#cls4#att84" name="username" type="string"/>
+    </Class>
+    <Class gr:x="245" gr:y="5" id="pkg1#cls7" name="PremiumInfo" duration="persistent">
+      <Attribute id="pkg1#cls7#att7" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="295" gr:y="285" id="pkg1#cls8" name="Accounting" duration="persistent">
+      <Attribute id="pkg1#cls8#att8" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="0" gr:y="0" id="pkg1#cls9" name="UserAttributes" duration="persistent" attributeOrder="pkg1#cls9#att9 pkg1#cls9#att32 pkg1#cls9#att33 pkg1#cls9#att34 pkg1#cls9#att35 pkg1#cls9#att36 pkg1#cls9#att37 pkg1#cls9#att38 pkg1#cls9#att39 pkg1#cls9#att40 pkg1#cls9#att41 pkg1#cls9#att42 pkg1#cls9#att43 pkg1#cls9#att44 pkg1#cls9#att45 pkg1#cls9#att46 pkg1#cls9#att47 pkg1#cls9#att48 pkg1#cls9#att49 pkg1#cls9#att50 pkg1#cls9#att51 pkg1#cls9#att52 pkg1#cls9#att53 pkg1#cls9#att54 pkg1#cls9#att55 pkg1#cls9#att56 pkg1#cls9#att57 pkg1#cls9#att58 pkg1#cls9#att59 pkg1#cls9#att60 pkg1#cls9#att61">
+      <Attribute id="pkg1#cls9#att9" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+      <Attribute id="pkg1#cls9#att61" name="reminderEmailConfig" type="string"/>
+      <Attribute id="pkg1#cls9#att60" name="useEmailAutoFilling" type="string"/>
+      <Attribute id="pkg1#cls9#att59" name="taxExempt" type="string"/>
+      <Attribute id="pkg1#cls9#att58" name="hideSponsorBilling" type="string"/>
+      <Attribute id="pkg1#cls9#att57" name="businessAddress" type="string"/>
+      <Attribute id="pkg1#cls9#att56" name="educationalDiscount" type="string"/>
+      <Attribute id="pkg1#cls9#att55" name="referralProof" type="string"/>
+      <Attribute id="pkg1#cls9#att54" name="recognitionLanguage" type="string"/>
+      <Attribute id="pkg1#cls9#att53" name="groupName" type="string"/>
+      <Attribute id="pkg1#cls9#att52" name="twitterUserName" type="string"/>
+      <Attribute id="pkg1#cls9#att51" name="clipFullPage" type="string"/>
+      <Attribute id="pkg1#cls9#att50" name="preferredCountry" type="string"/>
+      <Attribute id="pkg1#cls9#att49" name="preferredLanguage" type="string"/>
+      <Attribute id="pkg1#cls9#att48" name="partnerEmailOptInDate" type="string"/>
+      <Attribute id="pkg1#cls9#att47" name="emailOptOutDate" type="string"/>
+      <Attribute id="pkg1#cls9#att46" name="dailyEmailLimit" type="string"/>
+      <Attribute id="pkg1#cls9#att45" name="sentEmailCount" type="string"/>
+      <Attribute id="pkg1#cls9#att44" name="sentEmailDate" type="string"/>
+      <Attribute id="pkg1#cls9#att43" name="refererCode" type="string"/>
+      <Attribute id="pkg1#cls9#att42" name="referralCount" type="string"/>
+      <Attribute id="pkg1#cls9#att41" name="maxReferrals" type="string"/>
+      <Attribute id="pkg1#cls9#att40" name="dateAgreedTermsOfService" type="string"/>
+      <Attribute id="pkg1#cls9#att39" name="comment" type="string"/>
+      <Attribute id="pkg1#cls9#att38" name="recentMailedAddresses" type="string"/>
+      <Attribute id="pkg1#cls9#att37" name="incomingEmailAddress" type="string"/>
+      <Attribute id="pkg1#cls9#att36" name="viewedPromotions" type="string"/>
+      <Attribute id="pkg1#cls9#att35" name="preactivation" type="string"/>
+      <Attribute id="pkg1#cls9#att34" name="defaultLocationName" type="string"/>
+      <Attribute id="pkg1#cls9#att33" name="defaultLongitude" type="string"/>
+      <Attribute id="pkg1#cls9#att32" name="defaultLatitude" type="string"/>
+    </Class>
+    <Class gr:x="380" gr:y="0" id="pkg1#cls10" name="BusinessUserInfo" duration="persistent">
+      <Attribute id="pkg1#cls10#att10" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+  </Package>
+  <Package gr:x="680" gr:y="115" id="pkg2" name="NoteService">
+    <Class gr:x="40" gr:y="15" id="pkg2#cls5" name="NoteAttributes" duration="persistent">
+      <Attribute id="pkg2#cls5#att5" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="195" gr:y="0" id="pkg2#cls6" name="Note" duration="persistent" attributeOrder="pkg2#cls6#att6 pkg2#cls6#att1 pkg2#cls6#att2 pkg2#cls6#att3 pkg2#cls6#att62 pkg2#cls6#att63 pkg2#cls6#att64 pkg2#cls6#att65 pkg2#cls6#att66 pkg2#cls6#att67 pkg2#cls6#att68 pkg2#cls6#att69 pkg2#cls6#att70">
+      <Attribute id="pkg2#cls6#att6" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+      <Attribute id="pkg2#cls6#att70" name="tagNames" type="string" key="false"/>
+      <Attribute id="pkg2#cls6#att69" name="tagGUIDs" type="string" key="false"/>
+      <Attribute id="pkg2#cls6#att68" name="notebookGUID" type="string" key="false"/>
+      <Attribute id="pkg2#cls6#att67" name="updateSequenceNum" type="integer" key="false"/>
+      <Attribute id="pkg2#cls6#att66" name="active" type="boolean" key="false"/>
+      <Attribute id="pkg2#cls6#att65" name="deleted" type="date" key="false"/>
+      <Attribute id="pkg2#cls6#att64" name="updated" type="date" key="false"/>
+      <Attribute id="pkg2#cls6#att63" name="created" type="date" key="false"/>
+      <Attribute id="pkg2#cls6#att62" name="contentLength" type="integer" key="false"/>
+      <Attribute id="pkg2#cls6#att3" name="contentHash" type="string" key="false"/>
+      <Attribute id="pkg2#cls6#att2" name="content" type="text" key="false"/>
+      <Attribute id="pkg2#cls6#att1" name="title" type="string" key="false"/>
+    </Class>
+    <Class gr:x="0" gr:y="365" id="pkg2#cls11" name="Publishing" duration="persistent" attributeOrder="pkg2#cls11#att11 pkg2#cls11#att80 pkg2#cls11#att81 pkg2#cls11#att82 pkg2#cls11#att83">
+      <Attribute id="pkg2#cls11#att11" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+      <Attribute id="pkg2#cls11#att83" name="publicDescription" type="string"/>
+      <Attribute id="pkg2#cls11#att82" name="ascending" type="string"/>
+      <Attribute id="pkg2#cls11#att81" name="order" type="string"/>
+      <Attribute id="pkg2#cls11#att80" name="uri" type="string"/>
+    </Class>
+    <Class gr:x="200" gr:y="340" id="pkg2#cls12" name="Notebook" duration="persistent" attributeOrder="pkg2#cls12#att12 pkg2#cls12#att72 pkg2#cls12#att73 pkg2#cls12#att74 pkg2#cls12#att75 pkg2#cls12#att76 pkg2#cls12#att77 pkg2#cls12#att78 pkg2#cls12#att79">
+      <Attribute id="pkg2#cls12#att12" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+      <Attribute id="pkg2#cls12#att79" name="sharedNotebookIds" type="string" key="false"/>
+      <Attribute id="pkg2#cls12#att78" name="stack" type="string" key="false"/>
+      <Attribute id="pkg2#cls12#att77" name="name" type="string" key="false"/>
+      <Attribute id="pkg2#cls12#att76" name="published" type="string" key="false"/>
+      <Attribute id="pkg2#cls12#att75" name="serviceUpdated" type="string" key="false"/>
+      <Attribute id="pkg2#cls12#att74" name="serviceCreated" type="string" key="false"/>
+      <Attribute id="pkg2#cls12#att73" name="defaultNotebook" type="string" key="false"/>
+      <Attribute id="pkg2#cls12#att72" name="updateSequenceNumber" type="integer" key="false"/>
+    </Class>
+    <Class gr:x="40" gr:y="165" id="pkg2#cls13" name="SavedSearch" duration="persistent">
+      <Attribute id="pkg2#cls13#att13" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="35" gr:y="235" id="pkg2#cls14" name="SavedSearchScope" duration="persistent">
+      <Attribute id="pkg2#cls14#att14" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="215" gr:y="585" id="pkg2#cls15" name="NotebookDescriptor" duration="persistent">
+      <Attribute id="pkg2#cls15#att15" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="455" gr:y="0" id="pkg2#cls16" name="Resource" duration="persistent" attributeOrder="pkg2#cls16#att16 pkg2#cls16#att25 pkg2#cls16#att26 pkg2#cls16#att27 pkg2#cls16#att28 pkg2#cls16#att29 pkg2#cls16#att30 pkg2#cls16#att31">
+      <Attribute id="pkg2#cls16#att16" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+      <Attribute id="pkg2#cls16#att31" name="alternateData" type="string"/>
+      <Attribute id="pkg2#cls16#att30" name="updateSequenceNum" type="integer"/>
+      <Attribute id="pkg2#cls16#att29" name="recognition" type="string"/>
+      <Attribute id="pkg2#cls16#att28" name="data" type="string"/>
+      <Attribute id="pkg2#cls16#att27" name="width" type="integer"/>
+      <Attribute id="pkg2#cls16#att26" name="height" type="integer"/>
+      <Attribute id="pkg2#cls16#att25" name="mime" type="string"/>
+    </Class>
+    <Class gr:x="710" gr:y="10" id="pkg2#cls17" name="Tag" duration="persistent" attributeOrder="pkg2#cls17#att17 pkg2#cls17#att24">
+      <Attribute id="pkg2#cls17#att17" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+      <Attribute id="pkg2#cls17#att24" name="name" type="string"/>
+    </Class>
+    <Class gr:x="530" gr:y="80" id="pkg2#cls18" name="ResourceAttributes" duration="persistent">
+      <Attribute id="pkg2#cls18#att18" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="385" gr:y="145" id="pkg2#cls19" name="SharedNotebook" duration="persistent">
+      <Attribute id="pkg2#cls19#att19" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="585" gr:y="185" id="pkg2#cls20" name="SharedNotebookRecipientSettings" duration="persistent">
+      <Attribute id="pkg2#cls20#att20" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="480" gr:y="435" id="pkg2#cls21" name="BusinessNotebook" duration="persistent">
+      <Attribute id="pkg2#cls21#att21" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="475" gr:y="580" id="pkg2#cls22" name="LinkedNotebook" duration="persistent">
+      <Attribute id="pkg2#cls22#att22" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+    <Class gr:x="590" gr:y="305" id="pkg2#cls23" name="NotebookDescriptions" duration="persistent">
+      <Attribute id="pkg2#cls23#att23" key="true" name="oid" type="integer" specialBehavior="implicitOid"/>
+    </Class>
+  </Package>
+</DomainModel>

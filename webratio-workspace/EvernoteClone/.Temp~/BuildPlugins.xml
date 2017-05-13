@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Plugins>
+  <Plugin id="com.webratio.accountmanager" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\C4FD6B49003DBBA0C1A9C6FA37385E36"></Plugin>
+  <Plugin id="cordova-plugin-device" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\28CEDFA2A63AD7A0634570C335B55CAB"></Plugin>
+  <Plugin id="cordova-plugin-dialogs" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\31D41E5EEF04ABA20F0922DAEEBEE3AE"></Plugin>
+  <Plugin id="cordova-plugin-file" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\26219AB6778BC47066FACD56C055F4D3"></Plugin>
+  <Plugin id="cordova-plugin-file-transfer" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\33F49B155A676B09480456555736E0DB"></Plugin>
+  <Plugin id="cordova-plugin-globalization" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\F7CB762B4648DA5B2030A9FEDCC84E82"></Plugin>
+  <Plugin id="cordova-plugin-network-information" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\7EFF1202FDEC61804FE498DCF9A54108"></Plugin>
+  <Plugin id="cordova-plugin-splashscreen" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\ECFCB8E88E61C1B25FDAE87AA56A6301"></Plugin>
+  <Plugin id="cordova-plugin-websql" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\FC4951E29137554B83597365761214D8"></Plugin>
+  <Plugin id="cordova-plugin-whitelist" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\B4453138AA191D62012247F7C0FBA9F8"></Plugin>
+  <Plugin id="ionic-plugin-keyboard" dir="C:\Users\mario\AppData\Local\Temp\native_plugins\E99C2CC577D2E1DC2CD3FD81DA4EBDA3"></Plugin>
+</Plugins>

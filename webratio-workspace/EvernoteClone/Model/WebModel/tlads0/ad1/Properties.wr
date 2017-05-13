@@ -1,0 +1,15 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad1" name="Login" defaultSuccessPortDefinition="tlads0#ad1#spd1" defaultErrorPortDefinition="tlads0#ad1#epd1">
+  <Operations>
+    <Login id="tlads0#ad1#lgu1" name="Login" gr:x="335" gr:y="25">
+      <Comment xml:space="preserve">The login operation verifies the user's credentials (username and password) to grant access to the reserved sections of the mobile application. The login operation takes as input username and password. If verification succeeds, the login operation follows its Success Flow. When the operation fails, there are two different cases: if the user credentials are wrong, then the operation follows the generic Error Flow; if an unpredictable error happens, then the operation follows the Error Flow with code "Internal Error".</Comment>
+      <SuccessFlow id="tlads0#ad1#lgu1#sf1" to="tlads0#ad1#spd1" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad1#lgu1#ef1" to="tlads0#ad1#epd1" automaticCoupling="true"/>
+      <ErrorFlow id="tlads0#ad1#lgu1#ef2" to="tlads0#ad1#epd1" automaticCoupling="true" gr:bendpoints="0,269,-245,-1" code="Internal Error"/>
+    </Login>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad1#ipd1" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad1#ipd1#sf2" to="tlads0#ad1#lgu1" automaticCoupling="true"/>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad1#spd1" gr:x="0" gr:y="30" name="Success Port"/>
+  <ErrorPortDefinition id="tlads0#ad1#epd1" gr:x="0" gr:y="300" name="Error Port"/>
+</ActionDefinition>
