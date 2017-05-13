@@ -7,13 +7,13 @@ module.exports = {
 		root: [
 			path.join(__dirname, "src"),
 			
-				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.9.7\\WebRatio\\plugins\\com.webratio.generator.mobile_8.9.7.201612231218\\BuiltinComponents\\src"
+				"\/Users\/mespinozas\/Downloads\/WebRatio\/plugins\/com.webratio.generator.mobile_8.9.7.201612231218\/BuiltinComponents\/src"
 			,
-				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.9.7\\WebRatio\\plugins\\com.webratio.components.mobile.validation_8.9.7.201612231218\\src"
+				"\/Users\/mespinozas\/Downloads\/WebRatio\/plugins\/com.webratio.components.mobile.validation_8.9.7.201612231218\/src"
 			,
-				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.9.7\\WebRatio\\plugins\\com.webratio.components.mobile.operation_8.9.7.201612231218\\src"
+				"\/Users\/mespinozas\/Downloads\/WebRatio\/plugins\/com.webratio.components.mobile.operation_8.9.7.201612231218\/src"
 			,
-				"C:\\WebRatio\\WebRatio Mobile Platform Community 8.9.7\\WebRatio\\plugins\\com.webratio.components.mobile.content_8.9.7.201612231218\\src"
+				"\/Users\/mespinozas\/Downloads\/WebRatio\/plugins\/com.webratio.components.mobile.content_8.9.7.201612231218\/src"
 			
 		]
 	},
@@ -29,7 +29,7 @@ module.exports = {
 	},
 	resolveLoader: {
 		root: [
-			path.join("C:\\WebRatio\\WebRatio Mobile Platform Community 8.9.7\\WebRatio\\Nodejs", "node_modules")
+			path.join("\/Users\/mespinozas\/Downloads\/WebRatio\/Nodejs", "node_modules")
 		]
 	}
 };
