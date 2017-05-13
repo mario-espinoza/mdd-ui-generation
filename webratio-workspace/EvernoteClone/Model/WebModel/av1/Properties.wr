@@ -1,0 +1,11 @@
+<AppView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="av1" home="av1#scr1" login="av1#scr2">
+  <Action id="av1#act1" gr:x="225" gr:y="110" definition="tlads0#ad1">
+    <Comment xml:space="preserve">This is the action encapsulating the business logic needed in order to execute the user login. When the action execution is successful, the action follows the navigation flow outgoing from the Success Event. When the action fails, it outputs an error message, which is automatically handled by the mobile application and shown in a device system dialog. In this case, no navigation flow has been modeled from the Error Event; the application behavior is to show the dialog in the screen from which the action was previously triggered.</Comment>
+    <Events>
+      <SuccessEvent id="av1#act1#scce1" definition="tlads0#ad1#spd1">
+        <NavigationFlow id="av1#act1#scce1#nf1" to="av1#scr1" automaticCoupling="true"/>
+      </SuccessEvent>
+      <ErrorEvent id="av1#act1#erre1" definition="tlads0#ad1#epd1"/>
+    </Events>
+  </Action>
+</AppView>

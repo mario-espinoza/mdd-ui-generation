@@ -1,0 +1,69 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr1" gr:x="415" gr:y="20" name="Home" protected="true">
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr1#pwu1">
+          <layout:Attribute attribute="pkg2#cls6#att1"/>
+          <layout:Attribute attribute="pkg2#cls6#att64"/>
+          <layout:Event event="av1#scr1#pwu1#oslte1" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr1#enu2">
+          <layout:Field field="av1#scr1#enu2#fld3"/>
+          <layout:Event event="av1#scr1#enu2#oslte2" eventType="OnSelectEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <ViewComponents>
+    <List gr:x="225" gr:y="0" id="av1#scr1#pwu1" name="NoteList" checkable="false" dataBinding="pkg2#cls6" displayAttributes="pkg2#cls6#att1 pkg2#cls6#att64" eventOrder="av1#scr1#pwu1#oslte1">
+      <SortAttribute attribute="pkg2#cls6#att64" order="descending"/>
+      <Events>
+        <OnSelectEvent id="av1#scr1#pwu1#oslte1" name="NoteSelect" validate="true">
+          <NavigationFlow id="av1#scr1#pwu1#oslte1#nf3" to="av1#scr3#dau1" automaticCoupling="true"/>
+        </OnSelectEvent>
+      </Events>
+      <ConditionalExpression id="av1#scr1#pwu1#sc2" defaultPolicy="fill" booleanOperator="or">
+        <AttributesCondition id="av1#scr1#pwu1#sc2#acond1" name="Title contains keyword" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="pkg2#cls6#att1"/>
+        <AttributesCondition id="av1#scr1#pwu1#sc2#acond2" name="Content contains keyword" predicate="contains" booleanOperator="or" implied="true" attributes="pkg2#cls6#att2" ignoreCase="true"/>
+      </ConditionalExpression>
+    </List>
+    <Form gr:x="0" gr:y="15" id="av1#scr1#enu2" name="Search Note by keyword" fieldOrder="av1#scr1#enu2#fld3" eventOrder="av1#scr1#enu2#oslte2">
+      <Field id="av1#scr1#enu2#fld3" name="keyword" type="string" modifiable="true"/>
+      <Events>
+        <OnSelectEvent id="av1#scr1#enu2#oslte2" name="Search" validate="true">
+          <NavigationFlow id="av1#scr1#enu2#oslte2#nf4" to="av1#scr1#pwu1">
+            <ParameterBinding id="av1#scr1#enu2#oslte2#nf4#par3" source="av1#scr1#enu2#fld3" target="av1#scr1#pwu1#sc2#acond2" name="keyword - Content contains keyword"/>
+            <ParameterBinding id="av1#scr1#enu2#oslte2#nf4#par4" source="av1#scr1#enu2#fld3" target="av1#scr1#pwu1#sc2#acond1" name="keyword - Title contains keyword"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+    </Form>
+  </ViewComponents>
+  <Comment xml:space="preserve">This is the main screen of the mobile application. This screen must be protected so that the application redirects the user to the login screen when the user credentials are missing or when the user lacks access rights to see the screen. Feel free to change this model by encapsulating the screen in a protected screen set or by modeling other protected screens.</Comment>
+</Screen>

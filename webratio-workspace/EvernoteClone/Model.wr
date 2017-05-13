@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?webml version="8.6.0.0"?>
+
+<WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${mobileapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" enableProjectDependencies="true" toolVersion="8.9.7" fullScreen="true">
+  <ServiceDataProviders/>
+  <Roles/>
+</WebProject>

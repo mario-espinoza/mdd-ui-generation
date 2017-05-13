@@ -1,0 +1,11 @@
+<WebModel defaultLocale="lcl1" loginDefinition="tlads0#ad1" edtLvl="Mobile Platform Community Edition # 20170512" edtLvlCtrl="TW9iaWxlIFBsYXRmb3JtIENvbW11bml0eSBFZGl0aW9uICMgMjAxNzA1MTI=">
+  <Locale id="lcl1" language="en">
+    <PatternConfiguration deviceDefault="true" type="boolean" pattern="yes|no"/>
+    <PatternConfiguration deviceDefault="true" type="decimal" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration deviceDefault="true" type="date" pattern="M/d/yy"/>
+    <PatternConfiguration deviceDefault="true" type="float" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration deviceDefault="true" type="integer" useNumberPattern="false" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration deviceDefault="true" type="time" pattern="h:mm:ss a"/>
+    <PatternConfiguration deviceDefault="true" type="timestamp" pattern="M/d/yy h:mm:ss a"/>
+  </Locale>
+</WebModel>

@@ -1,0 +1,47 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr2" gr:x="50" gr:y="60" name="Login">
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr2#enu1">
+          <layout:Field field="av1#scr2#enu1#fld1"/>
+          <layout:Field field="av1#scr2#enu1#fld2"/>
+          <layout:Event event="av1#scr2#enu1#osbme1" eventType="OnSubmitEvent"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <ViewComponents>
+    <Form id="av1#scr2#enu1" name="Login" gr:x="0" gr:y="0" fieldOrder="av1#scr2#enu1#fld1 av1#scr2#enu1#fld2" eventOrder="av1#scr2#enu1#osbme1">
+      <Field id="av1#scr2#enu1#fld1" name="Username" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="av1#scr2#enu1#fld1#mnd1" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Field id="av1#scr2#enu1#fld2" name="Password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="av1#scr2#enu1#fld2#mnd2" name="Mandatory"/>
+        </VRules>
+      </Field>
+      <Events>
+        <OnSubmitEvent id="av1#scr2#enu1#osbme1" name="Login" validate="true">
+          <NavigationFlow id="av1#scr2#enu1#osbme1#nf2" to="av1#act1">
+            <ParameterBinding id="av1#scr2#enu1#osbme1#nf2#par1" source="av1#scr2#enu1#fld1" target="av1#act1.username"/>
+            <ParameterBinding id="av1#scr2#enu1#osbme1#nf2#par2" source="av1#scr2#enu1#fld2" target="av1#act1.password"/>
+          </NavigationFlow>
+        </OnSubmitEvent>
+      </Events>
+    </Form>
+  </ViewComponents>
+  <Comment xml:space="preserve">This screen allows the user to log in to the mobile application. This is the only screen to be used for the login and that's why it is set as "login". It contains a form letting the user enter the username and password and submit them.</Comment>
+</Screen>

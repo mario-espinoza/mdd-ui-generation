@@ -1,0 +1,40 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scr3" name="NoteCreation" gr:x="920" gr:y="30">
+  <ViewComponents>
+    <Details gr:x="0" gr:y="0" id="av1#scr3#dau1" name="Note Details" dataBinding="pkg2#cls6" displayAttributes="pkg2#cls6#att1 pkg2#cls6#att2 pkg2#cls6#att3 pkg2#cls6#att62 pkg2#cls6#att63 pkg2#cls6#att64 pkg2#cls6#att65 pkg2#cls6#att66 pkg2#cls6#att67 pkg2#cls6#att68 pkg2#cls6#att69 pkg2#cls6#att70">
+      <ConditionalExpression id="av1#scr3#dau1#sc1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="av1#scr3#dau1#sc1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </ConditionalExpression>
+    </Details>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scr3#dau1">
+          <layout:Attribute attribute="pkg2#cls6#att1"/>
+          <layout:Attribute attribute="pkg2#cls6#att2"/>
+          <layout:Attribute attribute="pkg2#cls6#att3"/>
+          <layout:Attribute attribute="pkg2#cls6#att62"/>
+          <layout:Attribute attribute="pkg2#cls6#att63"/>
+          <layout:Attribute attribute="pkg2#cls6#att64"/>
+          <layout:Attribute attribute="pkg2#cls6#att65"/>
+          <layout:Attribute attribute="pkg2#cls6#att66"/>
+          <layout:Attribute attribute="pkg2#cls6#att67"/>
+          <layout:Attribute attribute="pkg2#cls6#att68"/>
+          <layout:Attribute attribute="pkg2#cls6#att69"/>
+          <layout:Attribute attribute="pkg2#cls6#att70"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Screen>
